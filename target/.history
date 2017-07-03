@@ -1,0 +1,22 @@
+console
+compile
+test
+exit
+compile
+test
+exit
+submit dolfo.venancio@gmail.com OMWrDKe4YnWL5ZC0
+test
+exit
+compile
+test
+submit dolfo.venancio@gmail.com OMWrDKe4YnWL5ZC0
+echo 'addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "5.1.0")'
+cd
+ls
+exit
+eclipse
+exit
+eclipse
+exirt
+exit

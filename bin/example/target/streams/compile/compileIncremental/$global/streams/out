@@ -1,0 +1,65 @@
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
+[0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	added: Set(/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] [0m
+[0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Recompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/cvenancio/development/workspaceFP/example/src/test/scala/example/target/scala-2.10/classes...[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.10.6[0m
+[0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.15:component from component compiler for Scala 2.10.6[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 29c38164, interfacing (CompilerInterface) with Scala compiler version 2.10.6[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/cvenancio/.sbt/boot/scala-2.10.6/lib/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/home/cvenancio/development/workspaceFP/example/src/test/scala/example/target/scala-2.10/classes[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:3: object scalatest is not a member of package org[0m
+[0m[[31merror[0m] [0mimport org.scalatest.FunSuite[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:5: object junit is not a member of package org[0m
+[0m[[31merror[0m] [0mimport org.junit.runner.RunWith[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:6: object scalatest is not a member of package org[0m
+[0m[[31merror[0m] [0mimport org.scalatest.junit.JUnitRunner[0m
+[0m[[31merror[0m] [0m           ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:27: not found: type FunSuite[0m
+[0m[[31merror[0m] [0m  class ListsSuite extends FunSuite {[0m
+[0m[[31merror[0m] [0m                           ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:26: not found: type RunWith[0m
+[0m[[31merror[0m] [0m @RunWith(classOf[JUnitRunner])[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:40: not found: value test[0m
+[0m[[31merror[0m] [0m  test("one plus one is two")(assert(1 + 1 == 2))[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:49: not found: value test[0m
+[0m[[31merror[0m] [0m  test("one plus one is three?") {[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:74: not found: value test[0m
+[0m[[31merror[0m] [0m  test("details why one plus one is not three") {[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:85: not found: value test[0m
+[0m[[31merror[0m] [0m  test("intNotZero throws an exception if its argument is 0") {[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:102: not found: value Lists[0m
+[0m[[31merror[0m] [0m  import Lists._[0m
+[0m[[31merror[0m] [0m         ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:116: not found: value test[0m
+[0m[[31merror[0m] [0m  test("sum of a few numbers") {[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m/home/cvenancio/development/workspaceFP/example/src/test/scala/example/ListsSuite.scala:120: not found: value test[0m
+[0m[[31merror[0m] [0m  test("max of a few numbers") {[0m
+[0m[[31merror[0m] [0m  ^[0m
+[0m[[31merror[0m] [0m12 errors found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m
