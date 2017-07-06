@@ -1,6 +1,5 @@
 package example
 
-
 object Lists {
 
   /**
@@ -23,13 +22,13 @@ object Lists {
    * @param xs A list of natural numbers
    * @return The sum of all elements in `xs`
    */
-    def sum(xs: List[Int]): Int = {
-  	xs match {
-    		case x :: tail => x + sum(tail) // if there is an element, add it to the sum of the tail
-    		case Nil => 0 // if there are no elements, then the sum is 0
-  	}
+  def sum(xs: List[Int]): Int = {
+    xs match {
+      case x :: tail => x + sum(tail) // if there is an element, add it to the sum of the tail
+      case Nil => 0 // if there are no elements, then the sum is 0
     }
-  
+  }
+
   /**
    * This method returns the largest element in a list of integers. If the
    * list `xs` is empty it throws a `java.util.NoSuchElementException`.
@@ -43,8 +42,8 @@ object Lists {
    * @return The largest element in `xs`
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
-    def max(xs: List[Int]): Int = {
-  	if (xs.isEmpty) throw new NoSuchElementException
-  	xs.reduceLeft((x, y) => if (x > y) x else y)
-    }
+  def max(xs: List[Int]): Int = {
+    if (xs.isEmpty) throw new NoSuchElementException
+    xs.reduceLeft((x, y) => if (x > y) x else y)
   }
+}
