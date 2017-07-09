@@ -55,4 +55,30 @@ object RecursionExercises {
   //https://www.hackerrank.com/challenges/fp-update-list
   def f(arr:List[Int]):List[Int] = arr.map(Math.abs(_))
                                                   //> f: (arr: List[Int])List[Int]
+                                                  
+   def product(f: Int => Int) (a:Int, b:Int): Int =
+    if(a > b) 1
+    else f(a) * product (f) (a+1, b)              //> product: (f: Int => Int)(a: Int, b: Int)Int
+    
+  product(x => x*x) (3,7)                         //> res3: Int = 6350400
+  
+  def factorialProduct(n: Int) = product(x => x)(1,n)
+                                                  //> factorialProduct: (n: Int)Int
+  factorialProduct(5)                             //> res4: Int = 120
+  
+  def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int) (a:Int, b:Int): Int = {
+    if(a > b) zero
+    else combine(f(a), mapReduce(f, combine, zero) (a+1, b))
+  }                                               //> mapReduce: (f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b
+                                                  //| : Int)Int
+    
+  def productReduce(f: Int => Int) (a:Int, b:Int): Int = mapReduce(f, (x,y) => x*y, 1) (a,b)
+                                                  //> productReduce: (f: Int => Int)(a: Int, b: Int)Int
+  def sumReduce(f: Int => Int) (a:Int, b:Int): Int = mapReduce(f, (x,y) => x+y, 0) (a,b)
+                                                  //> sumReduce: (f: Int => Int)(a: Int, b: Int)Int
+  
+  def factorialReduce(n: Int): Int = productReduce(x => x)(1,n)
+                                                  //> factorialReduce: (n: Int)Int
+  factorialReduce(5)                              //> res5: Int = 120
+  sumReduce(x => x) (2,5)                         //> res6: Int = 14
 }

@@ -46,5 +46,26 @@ object RecursionExercises {;import org.scalaide.worksheet.runtime.library.Worksh
   def listLength(arr:List[Int]):Int = arr.length;System.out.println("""listLength: (arr: List[Int])Int""");$skip(116); 
   
   //https://www.hackerrank.com/challenges/fp-update-list
-  def f(arr:List[Int]):List[Int] = arr.map(Math.abs(_));System.out.println("""f: (arr: List[Int])List[Int]""")}
+  def f(arr:List[Int]):List[Int] = arr.map(Math.abs(_));System.out.println("""f: (arr: List[Int])List[Int]""");$skip(156); 
+                                                  
+   def product(f: Int => Int) (a:Int, b:Int): Int =
+    if(a > b) 1
+    else f(a) * product (f) (a+1, b);System.out.println("""product: (f: Int => Int)(a: Int, b: Int)Int""");$skip(31); val res$3 = 
+    
+  product(x => x*x) (3,7);System.out.println("""res3: Int = """ + $show(res$3));$skip(57); 
+  
+  def factorialProduct(n: Int) = product(x => x)(1,n);System.out.println("""factorialProduct: (n: Int)Int""");$skip(22); val res$4 = 
+  factorialProduct(5);System.out.println("""res4: Int = """ + $show(res$4));$skip(181); 
+  
+  def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int) (a:Int, b:Int): Int = {
+    if(a > b) zero
+    else combine(f(a), mapReduce(f, combine, zero) (a+1, b))
+  };System.out.println("""mapReduce: (f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int)Int""");$skip(98); 
+    
+  def productReduce(f: Int => Int) (a:Int, b:Int): Int = mapReduce(f, (x,y) => x*y, 1) (a,b);System.out.println("""productReduce: (f: Int => Int)(a: Int, b: Int)Int""");$skip(89); 
+  def sumReduce(f: Int => Int) (a:Int, b:Int): Int = mapReduce(f, (x,y) => x+y, 0) (a,b);System.out.println("""sumReduce: (f: Int => Int)(a: Int, b: Int)Int""");$skip(67); 
+  
+  def factorialReduce(n: Int): Int = productReduce(x => x)(1,n);System.out.println("""factorialReduce: (n: Int)Int""");$skip(21); val res$5 = 
+  factorialReduce(5);System.out.println("""res5: Int = """ + $show(res$5));$skip(26); val res$6 = 
+  sumReduce(x => x) (2,5);System.out.println("""res6: Int = """ + $show(res$6))}
 }
